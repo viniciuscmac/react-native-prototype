@@ -12,6 +12,7 @@ import {
   View
 } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -24,7 +25,10 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <Header></Header>
+      <View style={{flex:1}}>
+        <Header headerText={'App Prototype 1!'}/>
+        <AlbumList />
+      </View>
       
     );
   }
